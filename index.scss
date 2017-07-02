@@ -1,0 +1,119 @@
+@import url('//fonts.googleapis.com/css?family=Droid+Sans+Mono|Droid+Sans|Montserrat');
+
+$title-color: #19b7ff;
+$title-background: #222;
+$input-color: #ccc;
+$input-light: #fff;
+$output-color: #808080;
+$output-light: #aaa;
+
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+li {
+  margin-left: 2rem;
+}
+
+textarea {
+  overflow-y: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid $input-color;
+  
+  width: 100%;
+  height: calc(100% - 90px);
+//  @media (max-width: 1470px) {
+//    height: calc(100% - 114px);
+//  }
+  font-family: 'Droid Sans Mono';
+  font-size: 0.9rem;
+  resize: none;
+  padding: 0.5rem;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 2;
+  background: $title-background;
+  color: $title-color;
+  font-family: Montserrat;
+  
+}
+
+.input { 
+  background: $input-color;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  
+  &__title {
+    font-family: 'Droid Sans Mono';
+    margin-bottom: 9px;
+  }
+ /* 
+  &__footnote {
+    margin-top: 1px;
+    font-family: Montserrat;
+    font-size: 0.8rem;
+    color: $input-light;
+  }
+  */
+}
+
+.output {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  background: $output-color;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  
+  &__title {
+    font-family: 'Droid Sans';
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  &__box {
+    background: $output-light;
+    font-family: 'Droid Sans';
+    overflow-y: auto;
+    word-wrap: break-word;
+    border: 1px solid $output-color;
+    height: calc(100% - 90px);
+  //  @media (max-width: 1470px) {
+  //    height: calc(100% - 114px);
+ //   }
+    padding: 0.5rem;
+  }
+  /*
+  &__footnote {
+    margin-top: 4px;
+    font-family: Montserrat;
+    font-size: 0.8rem;
+    color: $output-light;
+  }
+  */
+}
